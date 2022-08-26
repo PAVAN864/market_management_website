@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{%block title%}
+    Register Page
+{%endblock%}
+{%block content%}
+<body class="text-center">
+<div class="container">
+    <form method="POST" class="form-register" style="color:crimson">
+        {{form.hidden_tag() }}
+        <img class="mb-4" src="data:image/png;base64,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" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+        <br>
+        {{form.username.label()}}
+        {{form.username(class='form-control',placeholder="Username")}}
+
+         {{form.email.label()}}
+        {{form.email(class='form-control',placeholder="Email")}}
+
+         {{form.password.label()}}
+        {{form.password(class='form-control',placeholder="Password")}}
+
+         {{form.Confirm_pw.label()}}
+        {{form.Confirm_pw(class='form-control',placeholder="Confirm Password")}}
+        <br><br>
+        <div>
+        {{form.submit(class='btn btn-lg btn-block btn-primary')}}
+        </div>
+        <div class="checkbox mb-3">
+            <h6>Have an account</h6>
+            <a class="btn btn-sm btn-secondary" href="{{url_for('login_page')}}">Log In</a>
+        </div>
+    </form>
+    </div>
+</body>
+{%endblock%}
